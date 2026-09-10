@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burning Pons | $BURNTEST</title>
+  <meta name="description" content="Burning Pons brings blazing energy, wild memes, and unstoppable chaos to the crypto jungle. $BURNTEST on Robinhood." />
+  <meta property="og:title" content="Burning Pons | $BURNTEST" />
+  <meta property="og:description" content="Blazing energy, wild memes, and unstoppable chaos in the crypto jungle." />
+  <meta property="og:image" content="banner.jpg" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              950: "#021208",
+              900: "#04180c",
+              800: "#072414",
+              700: "#0c3a20",
+              600: "#126b38",
+              500: "#1a8f4a",
+              400: "#3dcc6e",
+              300: "#7cff9a",
+            },
+            flame: {
+              50: "#fff8e1",
+              100: "#ffe082",
+              200: "#ffd54f",
+              300: "#ffc107",
+              400: "#ffb300",
+              500: "#ff9800",
+              600: "#ff6d00",
+              700: "#e65100",
+            },
+            glass: "#cfe8d4",
+          },
+          fontFamily: {
+            display: ["Bangers", "cursive"],
+            ticker: ["Orbitron", "sans-serif"],
+            body: ["Outfit", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@500;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #ffd54f;
+      --amber: #ffb300;
+      --ember: #ff6d00;
+      --leaf: #3dcc6e;
+      --mist: #7cff9a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Outfit", sans-serif;
+      background: #021208;
+      color: #e8ffe9;
+      overflow-x: hidden;
+    }
+
+    .forest-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(18, 107, 56, 0.45), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 10% 20%, rgba(255, 109, 0, 0.12), transparent 50%),
+        radial-gradient(ellipse 50% 40% at 90% 30%, rgba(255, 179, 0, 0.1), transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(6, 40, 18, 0.95), #021208 70%);
+    }
+
+    .canopy {
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(10, 60, 28, 0.7) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% -5%, rgba(7, 40, 18, 0.85) 0%, transparent 40%),
+        radial-gradient(ellipse at 80% 0%, rgba(12, 70, 32, 0.7) 0%, transparent 45%);
+      pointer-events: none;
+    }
+
+    .gold-text {
+      background: linear-gradient(180deg, #fff8e1 0%, #ffd54f 28%, #ffb300 55%, #ff6d00 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 18px rgba(255, 179, 0, 0.45));
+    }
+
+    .fire-title {
+      text-shadow:
+        0 0 12px rgba(255, 179, 0, 0.7),
+        0 0 32px rgba(255, 109, 0, 0.45),
+        0 4px 0 rgba(90, 30, 0, 0.4);
+      animation: flicker 2.8s ease-in-out infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { filter: brightness(1) drop-shadow(0 0 16px rgba(255, 179, 0, 0.5)); }
+      40% { filter: brightness(1.08) drop-shadow(0 0 28px rgba(255, 109, 0, 0.7)); }
+      62% { filter: brightness(0.94) drop-shadow(0 0 10px rgba(255, 179, 0, 0.35)); }
+      78% { filter: brightness(1.12) drop-shadow(0 0 36px rgba(255, 213, 79, 0.8)); }
+    }
+
+    .glass-card {
+      background: linear-gradient(160deg, rgba(207, 232, 212, 0.12), rgba(7, 36, 20, 0.72));
+      border: 1px solid rgba(255, 213, 79, 0.22);
+      box-shadow:
+        0 0 0 1px rgba(61, 204, 110, 0.08) inset,
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 40px rgba(255, 109, 0, 0.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(255, 179, 0, 0.5);
+      box-shadow:
+        0 0 0 1px rgba(255, 213, 79, 0.15) inset,
+        0 24px 60px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(255, 109, 0, 0.18);
+    }
+
+    .btn-fire {
+      background: linear-gradient(180deg, #ffd54f 0%, #ffb300 40%, #ff6d00 100%);
+      color: #2a1000;
+      box-shadow:
+        0 8px 24px rgba(255, 109, 0, 0.45),
+        0 0 0 1px rgba(255, 248, 225, 0.25) inset;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .btn-fire:hover {
+      transform: translateY(-2px) scale(1.03);
+      filter: brightness(1.08);
+      box-shadow:
+        0 12px 32px rgba(255, 109, 0, 0.6),
+        0 0 28px rgba(255, 213, 79, 0.55);
+    }
+
+    .btn-ghost {
+      background: rgba(7, 36, 20, 0.6);
+      border: 1px solid rgba(255, 213, 79, 0.35);
+      color: #ffe082;
+      box-shadow: 0 0 20px rgba(255, 179, 0, 0.08);
+    }
+
+    .btn-ghost:hover {
+      border-color: #ffd54f;
+      background: rgba(18, 107, 56, 0.45);
+      box-shadow: 0 0 28px rgba(255, 179, 0, 0.25);
+    }
+
+    .ember-layer, #embers {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .hero-banner {
+      background-image:
+        linear-gradient(180deg, rgba(2, 18, 8, 0.25) 0%, rgba(2, 18, 8, 0.15) 40%, rgba(2, 18, 8, 0.85) 100%),
+        url("banner.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .heat {
+      animation: haze 8s ease-in-out infinite;
+    }
+
+    @keyframes haze {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-6px) scale(1.015); }
+    }
+
+    .flame-ring {
+      box-shadow:
+        0 0 0 2px rgba(255, 213, 79, 0.4),
+        0 0 24px rgba(255, 109, 0, 0.55),
+        0 0 48px rgba(61, 204, 110, 0.2);
+      animation: pulse-ring 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0%, 100% { box-shadow: 0 0 0 2px rgba(255, 213, 79, 0.4), 0 0 24px rgba(255, 109, 0, 0.55), 0 0 48px rgba(61, 204, 110, 0.2); }
+      50% { box-shadow: 0 0 0 4px rgba(255, 213, 79, 0.7), 0 0 40px rgba(255, 109, 0, 0.8), 0 0 70px rgba(61, 204, 110, 0.35); }
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      border-block: 1px solid rgba(255, 213, 79, 0.2);
+      background: linear-gradient(90deg, rgba(255, 109, 0, 0.12), rgba(7, 36, 20, 0.9), rgba(255, 179, 0, 0.12));
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee 22s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .step-num {
+      background: linear-gradient(180deg, #ffd54f, #ff6d00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .vine {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #3dcc6e, #ffd54f, #3dcc6e, transparent);
+      box-shadow: 0 0 12px rgba(61, 204, 110, 0.6);
+    }
+
+    .nav-blur {
+      background: rgba(2, 18, 8, 0.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 213, 79, 0.15);
+    }
+
+    .copy-toast {
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .chart-frame {
+      background: #0b1a10;
+      border: 1px solid rgba(255, 213, 79, 0.25);
+      box-shadow: 0 0 50px rgba(255, 109, 0, 0.12), inset 0 0 40px rgba(18, 107, 56, 0.2);
+    }
+
+    .leaf-float {
+      animation: leaf 12s ease-in-out infinite;
+    }
+
+    @keyframes leaf {
+      0%, 100% { transform: translateY(0) rotate(-6deg); }
+      50% { transform: translateY(-14px) rotate(8deg); }
+    }
+
+    .ca-box {
+      font-variant-ligatures: none;
+      letter-spacing: 0.08em;
+    }
+
+    iframe { border: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fire-title, .heat, .marquee-track, .leaf-float, .flame-ring { animation: none; }
+    }
+  </style>
+</head>
+<body class="forest-bg min-h-screen">
+  <canvas id="embers"></canvas>
+  <div class="canopy fixed inset-x-0 top-0 h-40 z-10"></div>
+
+  <div id="copyToast" class="copy-toast fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] px-5 py-3 rounded-full btn-fire font-bold text-sm tracking-wide">
+    Contract copied to clipboard
+  </div>
+
+  <header class="nav-blur fixed top-0 inset-x-0 z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 sm:px-6 py-3">
+      <a href="#top" class="flex items-center gap-3 group">
+        <img src="logo.png" alt="Burning Pons logo" class="h-12 w-12 sm:h-14 sm:w-14 object-contain drop-shadow-[0_0_16px_rgba(255,179,0,0.7)] group-hover:scale-105 transition" />
+        <div>
+          <p class="font-display text-2xl sm:text-3xl tracking-wide gold-text leading-none">Burning Pons</p>
+          <p class="font-ticker text-[10px] sm:text-xs text-flame-200 tracking-[0.28em]">$BURNTEST</p>
+        </div>
+      </a>
+
+      <div class="hidden sm:flex items-center gap-5 md:gap-6 font-semibold text-sm text-glass/90">
+        <a href="#story" class="hover:text-flame-200 transition">Story</a>
+        <a href="#howto" class="hover:text-flame-200 transition">How to Buy</a>
+        <a href="#chart" class="hover:text-flame-200 transition">Chart</a>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://x.com/BurningPons" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full overflow-hidden border border-flame-300/40 hover:scale-110 transition flame-ring" aria-label="Burning Pons on X">
+          <img src="x.png" alt="X" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc" target="_blank" rel="noopener noreferrer" class="btn-fire rounded-full px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-extrabold uppercase tracking-widest">
+          Buy Now
+        </a>
+      </div>
+    </nav>
+    <div class="sm:hidden flex justify-center gap-5 pb-3 text-[11px] font-ticker tracking-[0.18em] text-flame-200">
+      <a href="#howto" class="hover:text-flame-50">HOW TO BUY</a>
+      <a href="#chart" class="hover:text-flame-50">CHART</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-banner relative min-h-screen flex items-center pt-24 pb-16">
+      <div class="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-950/55 to-forest-950/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-forest-950/50 via-transparent to-forest-950"></div>
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-flame-300/30 bg-forest-900/50 px-3 py-1 text-[11px] font-ticker tracking-[0.2em] text-flame-200 mb-5">
+              <span class="h-2 w-2 rounded-full bg-flame-500 animate-pulse"></span>
+              ROBINHOOD CHAIN • LIVE FIRE
+            </p>
+            <h1 class="font-display fire-title text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-4">
+              BURNING<br /><span class="gold-text">PONS</span>
+            </h1>
+            <p class="font-ticker text-flame-300 text-lg sm:text-xl tracking-[0.35em] mb-6">$BURNTEST</p>
+            <p class="max-w-xl text-lg sm:text-xl text-glass/90 leading-relaxed font-light">
+              Burning Pons brings blazing energy, wild memes, and unstoppable chaos to the crypto jungle.
+            </p>
+            <div class="flex flex-wrap gap-3 mt-8">
+              <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc" target="_blank" rel="noopener noreferrer" class="btn-fire rounded-full px-7 py-3.5 text-sm font-extrabold uppercase tracking-[0.2em]">
+                Buy Now
+              </a>
+              <a href="https://dexscreener.com/robinhood/0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc" target="_blank" rel="noopener noreferrer" class="btn-ghost rounded-full px-7 py-3.5 text-sm font-extrabold uppercase tracking-[0.2em]">
+                Chart
+              </a>
+            </div>
+
+            <div class="mt-8 glass-card rounded-2xl p-4 sm:p-5 max-w-xl">
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <span class="text-[11px] font-ticker tracking-[0.25em] text-forest-300 uppercase">Contract Address</span>
+                <span class="text-[10px] uppercase tracking-widest text-flame-300">Copy available CA</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <code id="caValue" class="ca-box flex-1 truncate font-ticker text-xs sm:text-sm text-flame-100 bg-forest-950/70 rounded-xl px-3 py-3 border border-flame-300/20">0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc</code>
+                <button type="button" id="copyCa" class="btn-fire shrink-0 rounded-xl px-4 py-3 text-xs font-extrabold uppercase tracking-widest">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center heat">
+            <div class="relative">
+              <div class="absolute -inset-8 rounded-full bg-gradient-to-b from-flame-400/30 via-forest-500/10 to-transparent blur-2xl"></div>
+              <img src="logo.png" alt="Burning Pons" class="relative w-64 sm:w-80 lg:w-[22rem] drop-shadow-[0_20px_50px_rgba(255,109,0,0.45)]" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee relative z-20 py-3">
+      <div class="marquee-track font-display text-2xl sm:text-3xl text-flame-200 tracking-wide">
+        <span class="px-6">$BURNTEST</span><span class="text-forest-400">✦</span>
+        <span class="px-6">BURNING PONS</span><span class="text-forest-400">✦</span>
+        <span class="px-6">CRYPTO JUNGLE</span><span class="text-forest-400">✦</span>
+        <span class="px-6">WILD MEMES</span><span class="text-forest-400">✦</span>
+        <span class="px-6">UNSTOPPABLE CHAOS</span><span class="text-forest-400">✦</span>
+        <span class="px-6">ROBINHOOD ETH</span><span class="text-forest-400">✦</span>
+        <span class="px-6">$BURNTEST</span><span class="text-forest-400">✦</span>
+        <span class="px-6">BURNING PONS</span><span class="text-forest-400">✦</span>
+        <span class="px-6">CRYPTO JUNGLE</span><span class="text-forest-400">✦</span>
+        <span class="px-6">WILD MEMES</span><span class="text-forest-400">✦</span>
+        <span class="px-6">UNSTOPPABLE CHAOS</span><span class="text-forest-400">✦</span>
+        <span class="px-6">ROBINHOOD ETH</span><span class="text-forest-400">✦</span>
+      </div>
+    </div>
+
+    <section id="story" class="relative z-20 py-20 sm:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="vine mb-12"></div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="glass-card rounded-3xl p-7 leaf-float">
+            <h3 class="font-display text-3xl gold-text mb-3">Blazing Energy</h3>
+            <p class="text-glass/80 leading-relaxed">A glass-forged P crowned in gold fire. Every swap feeds the blaze. The jungle never sleeps, and neither does $BURNTEST.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 leaf-float" style="animation-delay: -4s;">
+            <h3 class="font-display text-3xl gold-text mb-3">Wild Memes</h3>
+            <p class="text-glass/80 leading-relaxed">No boardrooms. No boring charts-only culture. Burning Pons is the campfire where degen stories get louder and weirder.</p>
+          </article>
+          <article class="glass-card rounded-3xl p-7 leaf-float" style="animation-delay: -8s;">
+            <h3 class="font-display text-3xl gold-text mb-3">Jungle Chaos</h3>
+            <p class="text-glass/80 leading-relaxed">Unstoppable, unhinged, and on-chain. From the forest floor to Robinhood ETH, the fire spreads one wallet at a time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="relative z-20 pb-20 sm:pb-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="font-ticker text-xs tracking-[0.35em] text-flame-300 mb-3">JOIN THE BLAZE</p>
+          <h2 class="font-display text-5xl sm:text-6xl fire-title">How to Buy</h2>
+          <p class="mt-4 text-glass/80 max-w-2xl mx-auto">Four steps. Robinhood ETH. Then you are in the crypto jungle with $BURNTEST.</p>
+        </div>
+
+        <ol class="grid md:grid-cols-2 gap-6">
+          <li class="glass-card rounded-3xl p-7 flex gap-5">
+            <span class="step-num font-display text-5xl leading-none">01</span>
+            <div>
+              <h3 class="font-bold text-xl text-flame-100 mb-2">Grab Robinhood ETH</h3>
+              <p class="text-glass/80 leading-relaxed">Open Robinhood and get ETH on the Robinhood chain. That ETH is your fuel — send it to the wallet you will swap with.</p>
+            </div>
+          </li>
+          <li class="glass-card rounded-3xl p-7 flex gap-5">
+            <span class="step-num font-display text-5xl leading-none">02</span>
+            <div>
+              <h3 class="font-bold text-xl text-flame-100 mb-2">Open Uniswap</h3>
+              <p class="text-glass/80 leading-relaxed">Hit <span class="text-flame-300 font-semibold">Buy Now</span> to launch Uniswap on Robinhood. Connect the same wallet holding your Robinhood ETH.</p>
+            </div>
+          </li>
+          <li class="glass-card rounded-3xl p-7 flex gap-5">
+            <span class="step-num font-display text-5xl leading-none">03</span>
+            <div>
+              <h3 class="font-bold text-xl text-flame-100 mb-2">Load $BURNTEST</h3>
+              <p class="text-glass/80 leading-relaxed">The swap link already sets $BURNTEST as the output. Or paste the contract address from above if you are adding the token yourself.</p>
+            </div>
+          </li>
+          <li class="glass-card rounded-3xl p-7 flex gap-5">
+            <span class="step-num font-display text-5xl leading-none">04</span>
+            <div>
+              <h3 class="font-bold text-xl text-flame-100 mb-2">Swap and Ignite</h3>
+              <p class="text-glass/80 leading-relaxed">Swap Robinhood ETH for $BURNTEST, confirm the fire, and welcome to unstoppable jungle chaos.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="flex flex-wrap justify-center gap-3 mt-10">
+          <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc" target="_blank" rel="noopener noreferrer" class="btn-fire rounded-full px-8 py-3.5 text-sm font-extrabold uppercase tracking-[0.2em]">
+            Buy $BURNTEST
+          </a>
+          <a href="https://dexscreener.com/robinhood/0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc" target="_blank" rel="noopener noreferrer" class="btn-ghost rounded-full px-8 py-3.5 text-sm font-extrabold uppercase tracking-[0.2em]">
+            View Chart
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chart" class="relative z-20 pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <p class="font-ticker text-xs tracking-[0.35em] text-flame-300 mb-3">LIVE JUNGLE HEAT</p>
+          <h2 class="font-display text-5xl sm:text-6xl gold-text">Chart</h2>
+        </div>
+        <div class="chart-frame rounded-3xl overflow-hidden">
+          <iframe
+            title="Dexscreener chart for $BURNTEST"
+            src="https://dexscreener.com/robinhood/0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc?embed=1&theme=dark&trades=0&info=0"
+            class="w-full h-[420px] sm:h-[560px] lg:h-[640px]"
+            allow="clipboard-write"
+          ></iframe>
+        </div>
+        <p class="text-center mt-4 text-sm text-forest-300">
+          Powered by
+          <a href="https://dexscreener.com/robinhood/0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc" target="_blank" rel="noopener noreferrer" class="text-flame-300 hover:text-flame-100 underline underline-offset-4">Dexscreener</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-20 border-t border-flame-300/15 bg-forest-950/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-10 w-10 object-contain" />
+        <div>
+          <p class="font-display text-xl gold-text">Burning Pons</p>
+          <p class="font-ticker text-[10px] tracking-[0.25em] text-flame-200">$BURNTEST</p>
+        </div>
+      </div>
+      <p class="text-xs text-glass/50 max-w-md text-center sm:text-right">
+        Memes, fire, and jungle chaos. $BURNTEST is a community token. Always verify the contract before you swap.
+      </p>
+      <a href="https://x.com/BurningPons" target="_blank" rel="noopener noreferrer" class="h-11 w-11 rounded-full overflow-hidden border border-flame-300/40 hover:scale-110 transition" aria-label="X / Twitter">
+        <img src="x.png" alt="X" class="h-full w-full object-cover" />
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const CA = "0x77f2e6878b7fff54f2c1099f43bedf69332f4bdc";
+    const copyBtn = document.getElementById("copyCa");
+    const toast = document.getElementById("copyToast");
+
+    async function copyCA() {
+      try {
+        await navigator.clipboard.writeText(CA);
+      } catch {
+        const input = document.createElement("textarea");
+        input.value = CA;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        input.remove();
+      }
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    copyBtn.addEventListener("click", copyCA);
+
+    const canvas = document.getElementById("embers");
+    const ctx = canvas.getContext("2d");
+    let embers = [];
+    let reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function spawn(n) {
+      embers = Array.from({ length: n }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2.2 + 0.4,
+        s: Math.random() * 0.7 + 0.25,
+        drift: Math.random() * 0.6 - 0.3,
+        hue: Math.random() > 0.7 ? "gold" : Math.random() > 0.5 ? "ember" : "leaf",
+        a: Math.random() * 0.6 + 0.2,
+      }));
+    }
+
+    function tick() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const e of embers) {
+        e.y -= e.s;
+        e.x += e.drift;
+        if (e.y < -10) {
+          e.y = canvas.height + 10;
+          e.x = Math.random() * canvas.width;
+        }
+        ctx.beginPath();
+        ctx.arc(e.x, e.y, e.r, 0, Math.PI * 2);
+        ctx.fillStyle =
+          e.hue === "gold"
+            ? `rgba(255, 213, 79, ${e.a})`
+            : e.hue === "ember"
+            ? `rgba(255, 109, 0, ${e.a})`
+            : `rgba(124, 255, 154, ${e.a * 0.7})`;
+        ctx.fill();
+      }
+      requestAnimationFrame(tick);
+    }
+
+    resize();
+    spawn(reduced ? 0 : 70);
+    window.addEventListener("resize", () => {
+      resize();
+      spawn(reduced ? 0 : 70);
+    });
+    if (!reduced) tick();
+  </script>
+</body>
+</html>
